@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rasterization Algorithms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rasterization Algorithms Visualization</h1>
+    <div class="controls">
+        <label for="algorithmSelect">Choose Algorithm:</label>
+        <select id="algorithmSelect">
+            <option value="dda">DDA Line</option>
+            <option value="bresenhamLine">Bresenham's Line</option>
+            <option value="bresenhamCircle">Bresenham's Circle</option>
+            <option value="stepByStepLine">Step-by-Step Line</option>
+        </select>
+
+        <div id="lineInputs">
+            <label for="x0">X0:</label><input type="number" id="x0" value="-100">
+            <label for="y0">Y0:</label><input type="number" id="y0" value="-50">
+            <label for="x1">X1:</label><input type="number" id="x1" value="150">
+            <label for="y1">Y1:</label><input type="number" id="y1" value="80">
+        </div>
+
+        <div id="circleInputs" style="display: none;">
+            <label for="xc">Xc:</label><input type="number" id="xc" value="0">
+            <label for="yc">Yc:</label><input type="number" id="yc" value="0">
+            <label for="r">Radius:</label><input type="number" id="r" value="70">
+        </div>
+
+        <label for="scale">Scale (pixels/unit):</label>
+        <input type="number" id="scale" value="20" min="1">
+
+        <button id="drawButton">Draw</button>
+        <button id="clearButton">Clear</button>
+    </div>
+    <div id="performanceResults"></div>
+    <canvas id="rasterCanvas"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>

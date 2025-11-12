@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  clipping-app:
+    build: .
+    ports:
+      - "8080:80"
+    container_name: line-clipping-app
